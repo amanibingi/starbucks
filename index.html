@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="starbucks.css">
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+    
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" ><img src="logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navi">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br>It's,<span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Non ipsam rem voluptatem nobis iste quam corporis quo quasi 
+                    aliquid! Culpa ullam repellendus porro quis odit, 
+                    consectetur quidem numquam doloribus vel.</p>
+                <a href="#">Lean More</a>    
+            </div>
+            <div class="imgBox">
+                <img src="img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick="imgSlide('img1.png');changeColor('#017143')"></li>
+            <li><img src="thumb2.png" onclick="imgSlide('img2.png');changeColor('#eb7495')" ></li>
+            <li><img src="thumb3.png" onclick="imgSlide('img3.png');changeColor('#d752b1')"></li>
+        </ul>
+        <ul class="social">
+            <li><img src="instagram.png"></li>
+            <li><img src="twitter.png" ></li>
+            <li><img src="facebook.png" ></li>
+        </ul>
+        <footer>
+            
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </footer>
+    </section>
+    <script >
+    function imgSlide(anything){
+        document.querySelector('.starbucks').src = anything;
+    }
+    function changeColor(color){
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+    }
+
+    function toggleMenu(){
+        var menuToggle = document.querySelector('.toggle');
+        var navi = document.querySelector('.navi')
+        menuToggle.classList.toggle('active')
+        navi.classList.toggle('active')
+    }
+    
+    </script>
+</body>
+</html>
